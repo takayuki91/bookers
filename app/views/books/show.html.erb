@@ -5,6 +5,6 @@
 <p><%= @book.body %></p>
 
 <!--編集画面を追加-->
-
+<%= link_to "Edit",edit_book_path(@book.id) %>
 <!--戻る-->
-<%= link_to "Back",'/books' %>
+<%= link_to "Back",books_path %>
