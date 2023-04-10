@@ -1,6 +1,6 @@
   <h1>Books</h1>
   <% if @book.errors.any? %>
-    <%= @book.errors.count %>件のエラー
+    <%= @book.errors.count %> error(s) prohibited this book from being saved
     <ul>
     <% @book.errors.full_messages.each do |message| %>
       <li><%= message %></li>
@@ -10,7 +10,7 @@
 
   <p>本のタイトル</p>
   <p>感想</p>
-  
+
   <% @books.each do |book| %>
   <span>
     <%= book.title %>
@@ -29,9 +29,8 @@
   </p>
 
   <p>
-  <!--削除-->
-  </p>
   
+  </p>
   <% end %>
 
   <h2>New book</h2>
@@ -44,8 +43,3 @@
 
     <%= f.submit 'Create Book' %>
   <% end %>
-
-  <body>
-    <%= yield %>
-  </body>
-</html>
